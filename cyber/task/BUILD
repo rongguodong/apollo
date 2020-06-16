@@ -15,7 +15,7 @@ cc_test(
     size = "small",
     srcs = ["task_test.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "@com_google_googletest//:gtest_main",
     ],
 )

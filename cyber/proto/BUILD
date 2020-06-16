@@ -335,3 +335,21 @@ py_proto(
         "//cyber/proto:role_attributes_pb2",
     ],
 )
+
+cc_proto_library(
+    name = "clock_cc_proto",
+    deps = [
+        ":clock_proto",
+    ],
+)
+
+proto_library(
+    name = "clock_proto",
+    srcs = ["clock.proto"],
+)
+
+py_proto(
+    name = "clock_py_pb2",
+    src = "clock.proto",
+)
+

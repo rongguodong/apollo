@@ -180,6 +180,10 @@ do
         ;;
     -y)
         ;;
+    -s|--use_sim_time)
+	USE_SIM_TIME=true
+	info "CyberRT uses simulation time if available"
+	;;
     stop)
 	stop_containers
 	exit 0
@@ -415,6 +419,7 @@ function main(){
         -e USE_GPU=$USE_GPU \
         -e NVIDIA_VISIBLE_DEVICES=all \
         -e NVIDIA_DRIVER_CAPABILITIES=compute,video,graphics,utility \
+	-e USE_SIM_TIME=$USE_SIM_TIME \
         $(local_volumes) \
         --net host \
         -w /apollo \

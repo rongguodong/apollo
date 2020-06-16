@@ -16,7 +16,7 @@ cc_library(
     srcs = ["py_cyber.cc"],
     hdrs = ["py_cyber.h"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "@python27",
     ],
 )
@@ -36,7 +36,7 @@ cc_library(
     hdrs = ["py_cyber.h"],
     defines = ["PY_MAJOR_VERSION=3"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "//third_party:python3",
     ],
 )
@@ -95,7 +95,7 @@ cc_test(
     srcs = ["py_record_test.cc"],
     deps = [
         ":py3_record",
-        "//cyber:cyber_core",
+        "//cyber:init",
         "//cyber/proto:unit_test_cc_proto",
         "@com_google_googletest//:gtest_main",
         "@fastrtps",
@@ -115,7 +115,7 @@ cc_library(
     srcs = ["py_time.cc"],
     hdrs = ["py_time.h"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "@fastrtps",
         "@python27",
     ],
@@ -135,7 +135,7 @@ cc_library(
     hdrs = ["py_time.h"],
     defines = ["PY_MAJOR_VERSION=3"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "//third_party:python3",
         "@fastrtps",
     ],
@@ -154,7 +154,7 @@ cc_library(
     srcs = ["py_timer.cc"],
     hdrs = ["py_timer.h"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "@python27",
     ],
 )
@@ -173,7 +173,7 @@ cc_library(
     hdrs = ["py_timer.h"],
     defines = ["PY_MAJOR_VERSION=3"],
     deps = [
-        "//cyber:cyber_core",
+        "//cyber:init",
         "//third_party:python3",
     ],
 )
@@ -192,7 +192,7 @@ cc_library(
     hdrs = ["py_parameter.h"],
     deps = [
         ":py_cyber",
-        "//cyber:cyber_core",
+        "//cyber:init",
         "@python27",
     ],
 )
@@ -212,7 +212,7 @@ cc_library(
     defines = ["PY_MAJOR_VERSION=3"],
     deps = [
         ":py3_cyber",
-        "//cyber:cyber_core",
+        "//cyber:init",
         "//third_party:python3",
     ],
 )
